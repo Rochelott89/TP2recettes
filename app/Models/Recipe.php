@@ -21,7 +21,10 @@ class Recipe extends Model
     }
 
 
-
+    public function recipe()
+    {
+        return $this->belongsTo(User::class,'author_id');
+    }
 
 }
 

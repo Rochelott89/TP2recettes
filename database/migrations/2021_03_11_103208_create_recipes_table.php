@@ -23,12 +23,13 @@ class CreateRecipesTable extends Migration
             $table->text('tags');
             $table->dateTime('date');
             $table->string('status');
+            $table->timestamps();
 
 
 
 
 
-           // $table->timestamps();
+           //$table->timestamps();
         });
     }
 

@@ -24,6 +24,9 @@ class RecipeFactory extends Factory
      *
      * @return array
      */
+
+    //The definition method returns
+    //the default set of attribute values that should be applied when creating a model using the factory.
     public function definition()
     //exo 4.2
     {
@@ -33,11 +36,14 @@ class RecipeFactory extends Factory
             'author_id' => $this->faker->randomDigit,
             'title' => Str::random(10),
             'content' => $this->faker->text,
-            'ingredients' => $this->faker->ingredient,
+            'ingredients' => Str::random(10),
+            //'ingredients' => $this->faker->ingredient,
             'url' => $this->faker->url,
             'tags' => '#juracuisine, #AOC, #plats',
             'date' => $this->faker->date($format = 'Y-m-d', $max = 'now'),
-            'status' =>$this->faker->promotionCode,
+            'status' =>Str::random(10),
+
+            //'status' =>$this->faker->promotionCode,
 
 
 

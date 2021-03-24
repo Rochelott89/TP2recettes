@@ -26,7 +26,10 @@ class DatabaseSeeder extends Seeder
        // $faker = Faker::create();
         //for($i=0; $i<20;$i++
 
+        //
+         \App\Models\User::factory(5)->has(\App\Models\Recipe::factory()->count(10))->create();
 
+        /*
         DB::table('users')->insert([
             //'id' => Int::random(3),
             'name' => Str::random(10),
