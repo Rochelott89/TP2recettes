@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Auth;
+namespace App\Http\Requests;
 
 use Illuminate\Auth\Events\Lockout;
 use Illuminate\Foundation\Http\FormRequest;
@@ -29,8 +29,10 @@ class LoginRequest extends FormRequest
     public function rules()
     {
         return [
+            'nom' => 'bail|required|between:5,20|alpha',
             'email' => 'required|string|email',
-            'password' => 'required|string',
+            'message' => 'bail|required|max:250'
+
         ];
     }
 

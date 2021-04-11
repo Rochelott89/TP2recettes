@@ -8,24 +8,27 @@
 
 @section('content')
 
-<ul>
+ <ul>
     @foreach ( $recipes as $recipe )
 
 
 
-        @if($loop->iteration > 3)
-
-            @break
-
-        @endif
 
 
-      <li>{{ $recipe->title }}</li>
+
+      <li> <a href="{{ $recipe->url }}">{{ $recipe->title }}</a></li>
+
+
+
+
+
+
+
 
     @endforeach
 
 
-</ul>
+ </ul>
 
 
 
