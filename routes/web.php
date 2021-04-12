@@ -7,6 +7,7 @@ use App\Http\Controllers\Recettes;
 use App\Http\Controllers\AdmRecettesController;
 use App\Http\Controllers\ContactController;
 use Laravel\Socialite\Facades\Socialite;
+use App\Http\Controllers\ProjectController;
 
 
 
@@ -118,10 +119,14 @@ Route::get('/callback', 'SocialAuthFacebookController@callback');
 
 
 //nos falta la vista /login **en realidad ya esta creada en auth/login
-Route::get('/login', 'Web\AppController@getLogin' )
+/*Route::get('/login', 'Web\AppController@getLogin' )
       ->name('login')
-      ->middleware('guest');
+      ->middleware('guest');*/
 
+
+
+
+Route::resource('projects', ProjectController::class);
 
 Route::get('login/{provider}', 'SocialController@redirect');
 
@@ -134,16 +139,14 @@ Route::get('login/{provider}/callback','SocialController@Callback');
 
 Route::get( '/login/{social}/callback', 'Web\AuthenticationController@getSocialCallback' )
       ->middleware('guest');*/
-//test con guia
-//Route::resource('sharks', 'sharkController');
+
 
 //qui va permettre l’affichage d’une liste complète des recettes
 //ainsi que l’ajout, l’édition et la suppression d’une recette.
-
+/*
 Route::resource('/recipes', AdmRecettesController::class)->except([
     'show', 'create', 'edit', 'destroy'
-    ]);
-
+    ]);*/
 
 
 
