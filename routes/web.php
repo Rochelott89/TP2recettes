@@ -8,7 +8,8 @@ use App\Http\Controllers\AdmRecettesController;
 use App\Http\Controllers\ContactController;
 use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\ProjectController;
-
+use App\Http\Controllers\ImageController;
+use App\Http\Controllers\RecettesCrudController;
 
 
 //use App\Models\Recipe;
@@ -109,7 +110,7 @@ Route::get('/recettes/{title}', [Recettes::class, 'show']);
 
 
 //exo.7 'admin/recettes'
-Route::resource('/recipes', AdmRecettesController::class);
+//  Route::resource('/recipes', AdmRecettesController::class);
 
 
 
@@ -125,12 +126,19 @@ Route::get('/callback', 'SocialAuthFacebookController@callback');
 
 
 
-
+//exo.7 este si funciona
 Route::resource('projects', ProjectController::class);
+
+//exo.7 definitivo poner al final, cambiar projects
+Route::resource('recettesCrud', RecettesCrudController::class);
 
 Route::get('login/{provider}', 'SocialController@redirect');
 
 Route::get('login/{provider}/callback','SocialController@Callback');
+
+//exo.sup.6
+Route::get('images', [ ImageController::class, 'index' ]);
+Route::post('images', [ ImageController::class, 'store' ])->name('images.store');
 
 
 

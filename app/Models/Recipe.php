@@ -26,5 +26,21 @@ class Recipe extends Model
         return $this->belongsTo(User::class,'author_id');
     }
 
+
+    protected $table = 'recipes';
+    public $timestamps = true;
+
+
+
+    protected $fillable = [
+        'author_id',
+        'title',
+        'content',
+        'ingredients',
+        'url',
+        'tags',
+        'date',
+        'status'
+    ];
 }
 

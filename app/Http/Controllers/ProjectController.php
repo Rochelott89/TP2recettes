@@ -78,6 +78,7 @@ class ProjectController extends Controller
      * @param  \App\Models\Project  $project
      * @return \Illuminate\Http\Response
      */
+    //es el update de UNA receta, no de todas
     public function update(Request $request, Project $project)
     {
         $request->validate([

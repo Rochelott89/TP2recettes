@@ -15,14 +15,14 @@ class CreateRecipesTable extends Migration
     {
         Schema::create('recipes', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('author_id');
-            $table->mediumText('title');
-            $table->longText('content');
-            $table->longText('ingredients');
-            $table->string('url');
-            $table->text('tags');
-            $table->dateTime('date');
-            $table->string('status');
+            $table->bigInteger('author_id')->nullable();
+            $table->mediumText('title')->nullable();
+            $table->longText('content')->nullable();
+            $table->longText('ingredients')->nullable();
+            $table->string('url')->nullable();
+            $table->text('tags')->nullable();
+            $table->dateTime('date')->nullable();
+            $table->string('status')->nullable();
             $table->timestamps();
 
 
