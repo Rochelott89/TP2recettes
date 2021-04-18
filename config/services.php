@@ -32,9 +32,9 @@ return [
 
     //FACEBOOK pas de changements ici, sinon que en .env
     'facebook' => [
-        'client_id' => ('258922505929452'),
-        'client_secret' => ('a458ca541ad440b522453536c477b256'),
-        'redirect' => env('http://localhost:8000/auth/facebook/callback'),
+        'client_id' => '258922505929452',
+        'client_secret' => 'a458ca541ad440b522453536c477b256',
+        'redirect' => 'http://localhost:8000/auth/facebook/callback',
     ],
 
     //GOOGLE
@@ -61,8 +61,8 @@ return [
 
     //LINKEDIN
     'linkedin' => [
-        'client_id' => '78um5fihv96gkt',
-        'client_secret' => 'jTmV01E8xtJHTBwC',
+        'client_id' => '786gdq6tz4v153',
+        'client_secret' => 'c5KrgAECDjsx38k2',
         'redirect' => 'http://localhost:8000/auth/linkedin/callback',
     ],
 

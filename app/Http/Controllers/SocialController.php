@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Auth;
 
 
 
+
 class SocialController extends Controller
 
 {
@@ -113,7 +114,7 @@ class SocialController extends Controller
                     'email' => $user->email,
 
                     'google_id'=> $user->id,
-
+                    'oauth_type' => 'google',
                     'password' => encrypt('123456dummy')
 
                 ]);
@@ -165,6 +166,7 @@ class SocialController extends Controller
                     'name' => $user->name,
                     'email' => $user->email,
                     'fb_id' => $user->id,
+                    'oauth_type' => 'facebook',
                     'password' => encrypt('admin@123')
                 ]);
 
@@ -206,7 +208,7 @@ class SocialController extends Controller
                 $user = User::create([
                     'name' => $user->name,
                     'email' => $user->email,
-                    'oauth_id' => $user->id,
+                    'linkedin_id' => $user->id,
                     'oauth_type' => 'linkedin',
                     'password' => encrypt('admin12345')
                 ]);
@@ -251,7 +253,7 @@ class SocialController extends Controller
                     'name' => $user->name,
                     'email' => $user->email,
                     'github_id'=> $user->id,
-                    'auth_type'=> 'github',
+                    'oauth_type'=> 'github',
                     'password' => encrypt('gitpwd059')
                 ]);
 

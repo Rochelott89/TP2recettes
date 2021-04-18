@@ -17,9 +17,15 @@
     <div class="top-bar-left">
       <ul class="menu">
         <li class="menu-text">Cooking</li>
-        <li><a href="/">Home</a></li>
+        <li><a href="/">Accueil</a></li>
         <li><a href="/recettes">Recettes</a></li>
         <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu">
+        <li><a href="/recettesCrud">Créer une recette </a></li>
+        <li><a href="/login">Se connecter</a></li>
       </ul>
     </div>
   </div>
