@@ -32,38 +32,38 @@ return [
 
     //FACEBOOK pas de changements ici, sinon que en .env
     'facebook' => [
-        'client_id' => env('FACEBOOK_CLIENT_ID'),
-        'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
-        'redirect' => env('FACEBOOK_CLIENT_CALLBACK'),
+        'client_id' => ('258922505929452'),
+        'client_secret' => ('a458ca541ad440b522453536c477b256'),
+        'redirect' => env('http://localhost:8000/auth/facebook/callback'),
     ],
 
     //GOOGLE
     'google' => [
-        'client_id' => env('GOOGLE_CLIENT_ID'),
-        'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => env('GOOGLE_CLIENT_CALLBACK'),
+        'client_id' => '698018411381-bfjls2rps0t1eaarrgolkel0fouquahd.apps.googleusercontent.com',
+        'client_secret' => '0PmJRFtQXVLQqzHOHi7CNwUE',
+        'redirect' => 'http://localhost:8000/auth/google/callback',
     ],
 
     //GITHUB
     'github' => [
-        'client_id' => env('GITHUB_CLIENT_ID'),
-        'client_secret' => env('GITHUB_CLIENT_SECRET'),
-        'redirect' => env('GITHUB_CLIENT_CALLBACK'),
+        'client_id' => 'f4b5c923f13778fcbdad',
+        'client_secret' => '04c91f86aed4f3dd4e30e80610894b23d55e51fe',
+        'redirect' => 'http://localhost:8000/auth/github/callback',
     ],
 
 
     //TWITTER
     'twitter' => [
-        'client_id' => env('GITHUB_CLIENT_ID'),
-        'client_secret' => env('GITHUB_CLIENT_SECRET'),
-        'redirect' => env('GITHUB_CLIENT_CALLBACK'),
+        'client_id' => '78um5gkt',
+        'client_secret' => 'jTmV01E8xtwC',
+        'redirect' => 'http://localhost:8000/auth/liedin/callback',
     ],
 
     //LINKEDIN
     'linkedin' => [
-        'client_id' => env('GITHUB_CLIENT_ID'),
-        'client_secret' => env('GITHUB_CLIENT_SECRET'),
-        'redirect' => env('GITHUB_CLIENT_CALLBACK'),
+        'client_id' => '78um5fihv96gkt',
+        'client_secret' => 'jTmV01E8xtJHTBwC',
+        'redirect' => 'http://localhost:8000/auth/linkedin/callback',
     ],
 
     //GITLAB

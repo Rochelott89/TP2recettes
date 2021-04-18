@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+//use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -12,11 +12,11 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
-   // use HasApiTokens;
+    use HasApiTokens;
     use HasFactory;
-   // use HasProfilePhoto;
+    use HasProfilePhoto;
     use Notifiable;
-  //  use TwoFactorAuthenticatable;
+    use TwoFactorAuthenticatable;
 
 
      /**
@@ -38,7 +38,13 @@ class User extends Authenticatable
         'email',
         'password',
         'github_id',
-        'auth_type',
+        //'auth_type',
+        'google_id',
+        'fb_id',
+        'linkedin_id',
+        'github_id',
+        'twitter_id',
+        'oauth_type'
     ];
 
     /**

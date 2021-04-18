@@ -10,6 +10,7 @@ use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\RecettesCrudController;
+use App\Http\Controllers\SocialController;
 
 
 //use App\Models\Recipe;
@@ -79,6 +80,7 @@ Route::get('/contact-us', function () {
     return view('contact-us');
 });
 
+
 /*
 Route::get('/contact-us', 'Contact@getContact');
 
@@ -114,9 +116,25 @@ Route::get('/recettes/{title}', [Recettes::class, 'show']);
 
 
 
-//exo.complementario Socialite Facebook
-Route::get('/redirect', 'SocialAuthFacebookController@redirect');
-Route::get('/callback', 'SocialAuthFacebookController@callback');
+
+
+//exo.complementario Socialite
+//GOOGLE
+//Route::get('/login', [GoogleController::class, 'index']);
+Route::get('auth/google', [SocialController::class, 'redirectToGoogle']);
+Route::get('auth/google/callback', [SocialController::class, 'handleGoogleCallback']);
+
+//FACEBOOK
+Route::get('auth/facebook', [SocialController::class, 'facebookRedirect']);
+Route::get('auth/facebook/callback', [SocialController::class, 'loginWithFacebook']);
+
+//LINKEDIN
+Route::get('auth/linkedin', [SocialController::class, 'linkedinRedirect']);
+Route::get('auth/linkedin/callback', [SocialController::class, 'linkedinCallback']);
+
+//GITHUB
+Route::get('auth/github', [SocialController::class, 'gitRedirect']);
+Route::get('auth/github/callback', [SocialController::class, 'gitCallback']);
 
 
 //nos falta la vista /login **en realidad ya esta creada en auth/login
@@ -132,9 +150,9 @@ Route::resource('projects', ProjectController::class);
 //exo.7 definitivo poner al final, cambiar projects
 Route::resource('recettesCrud', RecettesCrudController::class);
 
-Route::get('login/{provider}', 'SocialController@redirect');
+//Route::get('login/{provider}', 'SocialController@redirect');
 
-Route::get('login/{provider}/callback','SocialController@Callback');
+//Route::get('login/{provider}/callback','SocialController@Callback');
 
 //exo.sup.6
 Route::get('images', [ ImageController::class, 'index' ]);
