@@ -35,6 +35,7 @@ class RecipeFactory extends Factory
 
             'author_id' => $this->faker->randomDigit,
             'title' => Str::random(10),
+            'image' => Str::random(10),
             'content' => $this->faker->text,
             'ingredients' => Str::random(10),
             //'ingredients' => $this->faker->ingredient,

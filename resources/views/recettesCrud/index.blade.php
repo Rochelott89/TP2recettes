@@ -27,6 +27,7 @@
             <th>No</th>
             <th>Autor Id</th>
             <th>Title</th>
+            <th>Image</th>
             <th>Content</th>
             <th>Ingrédients</th>
             <th>Url</th>
@@ -41,6 +42,7 @@
                 <td>{{ ++$i }}</td>
                 <td>{{ $recette->author_id }}</td>
                 <td>{{ $recette->title }}</td>
+                <td><img src="{{ Storage::url($recette->image) }}" height="75" width="75" alt="" /></td>
                 <td>{{ $recette->content }}</td>
                 <td>{{ $recette->ingredients }}</td>
                 <td>{{ $recette->url }}</td>

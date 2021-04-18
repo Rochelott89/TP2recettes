@@ -17,6 +17,7 @@ class CreateRecipesTable extends Migration
             $table->id();
             $table->bigInteger('author_id')->nullable();
             $table->mediumText('title')->nullable();
+            $table->string('image')->nullable();
             $table->longText('content')->nullable();
             $table->longText('ingredients')->nullable();
             $table->string('url')->nullable();

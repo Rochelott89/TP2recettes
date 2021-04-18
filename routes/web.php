@@ -8,9 +8,9 @@ use App\Http\Controllers\AdmRecettesController;
 use App\Http\Controllers\ContactController;
 use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\ProjectController;
-use App\Http\Controllers\ImageController;
 use App\Http\Controllers\RecettesCrudController;
 use App\Http\Controllers\SocialController;
+use App\Http\Controllers\FileUpload;
 
 
 //use App\Models\Recipe;
@@ -155,8 +155,8 @@ Route::resource('recettesCrud', RecettesCrudController::class);
 //Route::get('login/{provider}/callback','SocialController@Callback');
 
 //exo.sup.6
-Route::get('images', [ ImageController::class, 'index' ]);
-Route::post('images', [ ImageController::class, 'store' ])->name('images.store');
+Route::get('/image-upload', [FileUpload::class, 'createForm']);
+Route::post('/image-upload', [FileUpload::class, 'fileUpload'])->name('imageUpload');
 
 
 

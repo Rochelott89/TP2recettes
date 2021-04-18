@@ -42,6 +42,7 @@ class RecettesCrudController extends Controller
         $request->validate([
             'author_id' => 'required',
             'title' => 'required',
+            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             'content' => 'required',
             'ingredients' => 'required',
             'url' => 'required',
@@ -53,8 +54,33 @@ class RecettesCrudController extends Controller
 
         Recipe::create($request->all());
 
+        $imageName = time().'.'.$request->image->extension();
+
+        $request->image->move(public_path('images'), $imageName);
+
         return redirect()->route('recettesCrud.index')
             ->with('success', 'Recette créée avec succès.');
+
+          /*  //ver si es recettes/images o recette/images o recipes/images
+        $path = $request->file('image')->store('images');
+        $recette = new Recipe;
+        $recette->author_id = $request->author_id;
+        $recette->title = $request->title;
+        $recette->image = $path;
+        $recette->content = $request->content;
+        $recette->ingredients = $request->ingredients;
+        $recette->url = $request->url;
+        $recette->tags = $request->tags;
+        $recette->date = $request->date;
+        $recette->status = $request->status;
+
+        $recette->save();
+
+        return redirect()->route('recettesCrud.index')
+                        ->with('success','Post has been created successfully.');*/
+
+
+
     }
 
     /**
@@ -90,6 +116,7 @@ class RecettesCrudController extends Controller
         $request->validate([
             'author_id' => 'required',
             'title' => 'required',
+            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             'content' => 'required',
             'ingredients' => 'required',
             'url' => 'required',

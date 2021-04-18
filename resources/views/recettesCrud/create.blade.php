@@ -42,6 +42,15 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
+                    <strong>Post Image:</strong>
+                     <input type="file" name="image" class="form-control" placeholder="Post Image">
+                    @error('image')
+                      <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                   @enderror
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
                     <strong>Contenu:</strong>
                     <textarea class="form-control" style="height:50px" name="content"
                     placeholder="Contenu"></textarea>
