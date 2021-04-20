@@ -109,6 +109,7 @@ Route::get('/dashboard', function () {
 //Route::get('/recettes/{url}'
 Route::get('/recettes/{title}', [Recettes::class, 'show']);
 
+//Route::get('/recettes/{{$recette->title}}', [Recettes::class, 'show']);
 
 
 //exo.7 'admin/recettes'

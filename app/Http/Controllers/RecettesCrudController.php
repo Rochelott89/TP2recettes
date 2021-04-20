@@ -42,7 +42,7 @@ class RecettesCrudController extends Controller
         $request->validate([
             'author_id' => 'required',
             'title' => 'required',
-            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            //'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             'content' => 'required',
             'ingredients' => 'required',
             'url' => 'required',
@@ -54,9 +54,9 @@ class RecettesCrudController extends Controller
 
         Recipe::create($request->all());
 
-        $imageName = time().'.'.$request->image->extension();
+       // $imageName = time().'.'.$request->image->extension();
 
-        $request->image->move(public_path('images'), $imageName);
+        //$request->image->move(public_path('images'), $imageName);
 
         return redirect()->route('recettesCrud.index')
             ->with('success', 'Recette créée avec succès.');
@@ -89,9 +89,12 @@ class RecettesCrudController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Recipe $recette)
+    public function show($id)
     {
-        return view('recettesCrud.show', compact('recette'));    }
+        $recette = \App\Models\Recipe::find($id);
+
+        return view('recettesCrud.show', compact('recette'));
+    }
 
     /**
      * Show the form for editing the specified resource.
@@ -99,8 +102,10 @@ class RecettesCrudController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Recipe $recette)
+    public function edit($id)
     {
+        $recette = \App\Models\Recipe::find($id);
+
         return view('recettesCrud.edit', compact('recette'));
     }
 
@@ -116,7 +121,7 @@ class RecettesCrudController extends Controller
         $request->validate([
             'author_id' => 'required',
             'title' => 'required',
-            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            //'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             'content' => 'required',
             'ingredients' => 'required',
             'url' => 'required',
@@ -124,6 +129,19 @@ class RecettesCrudController extends Controller
             'date' => 'required',
             'status' => 'required'
         ]);
+            /*
+        $recette->author_id = request("author_id");
+        $recette->title = request("title");
+        //$recette->image = $path;
+        $recette->content = request("content");
+        $recette->ingredients = request("ingredients");
+        $recette->url = request("url");
+        $recette->tags = request("tags");
+        $recette->date = request("date");
+        $recette->status = request("status");
+
+        $recette->update(request(["author_id", "title", "content", "ingredients", "url", "tags", "date", "status"]));*/
+
         $recette->update($request->all());
 
         return redirect()->route('recettesCrud.index')
@@ -136,8 +154,9 @@ class RecettesCrudController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Recipe $recette)
+    public function destroy($id)
     {
+        $recette = \App\Models\Recipe::find($id);
         $recette->delete();
 
         return redirect()->route('recettesCrud.index')

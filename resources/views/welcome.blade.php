@@ -16,7 +16,7 @@
         @endif
 
 
-      <li> <a href="{{ $recipe->url }}">{{ $recipe->title }}</a></li>
+      <li> <a href="/recettes/{{ $recipe->title }}">{{ $recipe->title }}</a></li>
 
 
 

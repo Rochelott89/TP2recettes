@@ -22,10 +22,9 @@
             </ul>
         </div>
     @endif
-
     <form action="{{ route('recettesCrud.update', $recette->id) }}" method="POST">
-        @csrf
-        @method('PUT')
+        {{ csrf_field() }}
+        {{ method_field('PUT') }}
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -55,7 +54,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Contenu:</strong>
-                    <textarea class="form-control" style="height:50px" name="content" value="{{ $recette->content }}" placeholder="Contenu"></textarea>
+                    <input class="form-control" style="height:50px" name="content" value="{{ $recette->content }}" placeholder="Contenu">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">

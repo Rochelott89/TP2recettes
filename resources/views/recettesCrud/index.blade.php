@@ -10,7 +10,11 @@
                 <h2>CRUD Recettes </h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('recettesCrud.create') }}" title="Créer une recette"> <i class="fas fa-plus-circle"></i>
+                <a style="margin-right: 10px;" class="btn btn-success" href="{{ route('recettesCrud.create') }}" title="Créer une recette"> <i class="fas fa-plus-circle"></i>
+                    </a>
+            </div>
+            <div class="pull-right">
+                <a style="margin-right: 10px;" class="btn btn-primary" href="/" title="Accueil"> <i class="fas fa-backward"></i>
                     </a>
             </div>
         </div>
