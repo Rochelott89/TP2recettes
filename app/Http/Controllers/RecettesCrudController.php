@@ -142,6 +142,8 @@ class RecettesCrudController extends Controller
 
         $recette->update(request(["author_id", "title", "content", "ingredients", "url", "tags", "date", "status"]));*/
 
+        Recipe::create($request->all());
+
         $recette->update($request->all());
 
         return redirect()->route('recettesCrud.index')
