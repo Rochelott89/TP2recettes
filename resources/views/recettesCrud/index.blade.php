@@ -38,7 +38,6 @@
             <th>Tags</th>
             <th>Date</th>
             <th>Status</th>
-
             <th width="280px">Action</th>
         </tr>
         @foreach ($recettes as $recette)

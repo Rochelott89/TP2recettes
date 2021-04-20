@@ -143,8 +143,6 @@ Route::get('auth/github/callback', [SocialController::class, 'gitCallback']);
 
 
 
-//exo.7 este si funciona
-Route::resource('projects', ProjectController::class);
 
 //exo.7 definitivo poner al final, cambiar projects
 Route::resource('recettesCrud', RecettesCrudController::class);
