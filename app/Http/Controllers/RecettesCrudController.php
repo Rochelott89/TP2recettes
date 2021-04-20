@@ -139,7 +139,6 @@ class RecettesCrudController extends Controller
         $recette->tags = request("tags");
         $recette->date = request("date");
         $recette->status = request("status");
-
         $recette->update(request(["author_id", "title", "content", "ingredients", "url", "tags", "date", "status"]));*/
 
         Recipe::create($request->all());
@@ -150,13 +149,33 @@ class RecettesCrudController extends Controller
             ->with('success', 'Project updated successfully');
     }
 
+                            /*
+                        $recette->author_id = request("author_id");
+                        $recette->title = request("title");
+                        //$recette->image = $path;
+                        $recette->content = request("content");
+                        $recette->ingredients = request("ingredients");
+                        $recette->url = request("url");
+                        $recette->tags = request("tags");
+                        $recette->date = request("date");
+                        $recette->status = request("status");
+
+                        $recette->update(request(["author_id", "title", "content", "ingredients", "url", "tags", "date", "status"]));*/
+
+                    // Recipe::create($request->all());
+
+                        //$recette->update($request->all());
+
+
+
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+
+     public function destroy($id)
     {
         $recette = \App\Models\Recipe::find($id);
         $recette->delete();

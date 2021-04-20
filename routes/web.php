@@ -83,9 +83,7 @@ Route::get('/contact-us', function () {
 
 /*
 Route::get('/contact-us', 'Contact@getContact');
-
 Route::post('/contact-us', 'Contact@saveContact');
-
 */
 
 //exo.6
@@ -163,7 +161,6 @@ Route::post('/image-upload', [FileUpload::class, 'fileUpload'])->name('imageUplo
 
 /*Route::get( '/login/{social}', 'Web\AuthenticationController@getSocialRedirect' )
       ->middleware('guest');
-
 Route::get( '/login/{social}/callback', 'Web\AuthenticationController@getSocialCallback' )
       ->middleware('guest');*/
 

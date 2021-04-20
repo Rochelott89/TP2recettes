@@ -16,7 +16,7 @@
 
 
 
-      <li> <a href="{{ $recipe->url }}">{{ $recipe->title }}</a></li>
+    <div><a href="/recettes/{{ $recipe->title }}">{{ $recipe->title }}</a></div>
 
 
 

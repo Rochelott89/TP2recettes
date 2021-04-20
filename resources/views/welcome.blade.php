@@ -3,7 +3,10 @@
 @extends('layouts/main')
 
 @section('content')
-
+<style>
+    div {text-align: center;}
+</style>
+<div>Notres dernières recettes</div>
 <ul>
     @foreach ( $recipes as $recipe )
 
@@ -16,7 +19,7 @@
         @endif
 
 
-      <li> <a href="/recettes/{{ $recipe->title }}">{{ $recipe->title }}</a></li>
+      <div><a href="/recettes/{{ $recipe->title }}">{{ $recipe->title }}</a></div>
 
 
 
