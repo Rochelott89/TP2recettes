@@ -49,10 +49,9 @@ Il nous ne reste maintenant que de créer et d'utiliser des **Model** pour que n
 ## Les Problèmes Rencontrés
 
 Quelques problemes de débutant à mentionner lors de démarrage de projet étaient:
-1- Utilisation d'un **seul** ordinateur portable au premier temps pour travailler sur le projet mais à un moment donné il fallait que chacun travaille de son côté et adopter le partage des taches.
-2- Des problèmes de la configuration de fichier env qui n'est pas un fichier de commit.
-3- Des erreurs liées aux versions de php qui étaient plus embetantes que les erreurs de type “No application encryption key has been specified” qui pouvaient se résoudre en faisant:  
-php artisan key:generate
-4- Des problémes liés aux syntaxes de laravel.
+* Utilisation d'un **seul** ordinateur portable au premier temps pour travailler sur le projet mais à un moment donné il fallait que chacun travaille de son côté et adopter le partage des taches.
+* Des problèmes de la configuration de fichier env qui n'est pas un fichier de commit.
+* Des erreurs liées aux versions de php qui étaient plus embetantes que les erreurs de type “No application encryption key has been specified” qui pouvaient se résoudre en faisant:       php artisan key:generate
+* Des problémes liés aux syntaxes de laravel.
 
 
