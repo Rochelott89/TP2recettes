@@ -1,5 +1,5 @@
 
-###Description
+### Description
 le sitemap de notre application est La page d’accueil qui est constituée de **menu principal** et aussi les titres des dernières recettes. Le Menu principal a les éléments suivants:
 
 | PAGE PARENT       | CONTENU                                                                                             | PAGE ENFANT/ BOUTON CLICKABLE                 | URL             |
@@ -10,7 +10,7 @@ le sitemap de notre application est La page d’accueil qui est constituée de *
 | CREER UNE RECETTE | Formulaire de nouvelle recette a remplir, Affichage des recettes disponible pour une action de CRUD | Lien de retour, lien d?ajout, bouton submit   | /recettesCrud   |
 | SE CONNECTER      | Se logger grace aux differents types de comptes exterieurs et interieur                             | Lien vers les comptes ext‚rieurs et int‚rieur | /login          |
 
-##Detail
+## Detail
 
 | PAGE PARENT       | INFO SUPPLEMENTAIRE                                                                                                 |
 |-------------------|---------------------------------------------------------------------------------------------------------------------|
@@ -21,14 +21,14 @@ le sitemap de notre application est La page d’accueil qui est constituée de *
 
 
 
-##Le déroulement de projet
+## Le déroulement de projet
 Au début, pour mieux comprendre comme le TP1, on a créé des fichiers de recette en statique avant d'aller les chercher dans la B.D.D en dynamique.Donc dans les premiers pas les routes nous emmènent directement vers les pages Views sans passer par les contrôleurs.
  
 
 
 
 
-##Les Problèmes Rencontrés
+## Les Problèmes Rencontrés
 Dans un premier temps on utilisait le même ordinateur portable pour travailler sur le TP mais à un moment donné il fallait que chacun travaille de son côté.
 Après clonage des fichiers de projet sur l’ordinateur, il ne marchait pas. Le problème était lié à 
 1-Fichier env n’est pas un fichier de commit. donc il faut le créer sur la machine locale avec les variables d’environnement associées à la même machine.
