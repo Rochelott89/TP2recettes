@@ -1,3 +1,113 @@
+###Guide d’installation 
+
+1.	Clone repository
+•	git clone https://github.com/Rochelott89/TP2recettes
+
+2.	CD (change directory) à l'emplacement de votre ordinateur désiré
+•	cd path
+
+3.	Composer installation 
+•	composer install
+
+4.	NPM installation
+•	npm install
+•	npm run dev
+
+5.	Mise en place de Socialite
+•	composer require laravel/jetstream
+•	php artisan jetstream:install livewire
+•	php artisan migrate (exécutez la commande pour migrer les propriétés d'authentification)
+•	composer require laravel/socialite
+
+Ouvrir config/app.php, ajouter si non présent : 
+
+providers' => [
+    Laravel\Socialite\SocialiteServiceProvider::class,
+],
+'aliases' => [
+    'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+],
+
+
+Ouvrir config/services.php, ajouter si non présent : 
+
+return [
+    ],
+    //FACEBOOK 
+    'facebook' => [
+        'client_id' => '258922505929452',
+        'client_secret' => 'a458ca541ad440b522453536c477b256',
+        'redirect' => 'http://localhost:8000/auth/facebook/callback',
+    ],
+
+    //GOOGLE
+    'google' => [
+        'client_id' => '698018411381-bfjls2rps0t1eaarrgolkel0fouquahd.apps.googleusercontent.com',
+        'client_secret' => '0PmJRFtQXVLQqzHOHi7CNwUE',
+        'redirect' => 'http://localhost:8000/auth/google/callback',
+    ],
+
+    //GITHUB
+    'github' => [
+        'client_id' => 'f4b5c923f13778fcbdad',
+        'client_secret' => '04c91f86aed4f3dd4e30e80610894b23d55e51fe',
+        'redirect' => 'http://localhost:8000/auth/github/callback',
+    ],
+
+    //TWITTER
+    'twitter' => [
+        'client_id' => '78um5gkt',
+        'client_secret' => 'jTmV01E8xtwC',
+        'redirect' => 'http://localhost:8000/auth/twitter/callback',
+    ],
+
+//LINKEDIN
+    'linkedin' => [
+        'client_id' => '786gdq6tz4v153',
+        'client_secret' => 'c5KrgAECDjsx38k2',
+        'redirect' => 'http://localhost:8000/auth/linkedin/callback',
+    ],
+
+
+
+
+
+
+
+6.	Générer une clé de chiffrement d'application
+•	php artisan key:generate
+
+7.	Création BD
+•	Regarder dans le projet que le fichier database.db est créé dans le dossier database, sinon le créer manuellement.
+
+8.	Modifier fichier .env pour que Laravel puisse se connecter avec la BD
+APP_NAME=Laravel
+APP_ENV=local
+APP_DEBUG=true
+APP_URL=http://localhost
+
+
+DB_CONNECTION=sqlite
+#DB_HOST=127.0.0.1
+#DB_PORT=3306
+DB_DATABASE=C:\Users\cesar\Documents\MIASHS\ProgWeb2\TP2Laravel\TP2Laravel\database\database.db
+#username et password pas necessaire pour sqlite
+#DB_USERNAME=root
+#DB_PASSWORD=ic2a
+
+*DB_DATABASE = avec votre chemin pour le fichier database.db
+
+9.	Migration de la BD
+•	php artisan migrate
+
+10.	Seed la BD
+•	php artisan migrate:fresh --seed -v
+
+11.	Lancer le serveur
+•	php artisan serve
+•	http://localhost:8000/ pour aller à l’Accueil 
+
+
 
 ### Description
 la page principale de notre application est la page d’accueil qui est constituée d'un **menu principal** et aussi les titres des dernières recettes. Le Menu principal se trouve dans la plupart des autres pages de cet application et il a des éléments suivants:
