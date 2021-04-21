@@ -1,4 +1,4 @@
-###Guide d’installation 
+### Guide d’installation 
 
 1.	Clone repository
 •	git clone https://github.com/Rochelott89/TP2recettes
@@ -32,7 +32,7 @@ providers' => [
 Ouvrir config/services.php, ajouter si non présent : 
 
 return [
-    ],
+    
     //FACEBOOK 
     'facebook' => [
         'client_id' => '258922505929452',
@@ -61,18 +61,12 @@ return [
         'redirect' => 'http://localhost:8000/auth/twitter/callback',
     ],
 
-//LINKEDIN
+    //LINKEDIN
     'linkedin' => [
         'client_id' => '786gdq6tz4v153',
         'client_secret' => 'c5KrgAECDjsx38k2',
         'redirect' => 'http://localhost:8000/auth/linkedin/callback',
     ],
-
-
-
-
-
-
 
 6.	Générer une clé de chiffrement d'application
 •	php artisan key:generate
@@ -106,7 +100,6 @@ DB_DATABASE=C:\Users\cesar\Documents\MIASHS\ProgWeb2\TP2Laravel\TP2Laravel\datab
 11.	Lancer le serveur
 •	php artisan serve
 •	http://localhost:8000/ pour aller à l’Accueil 
-
 
 
 ### Description
