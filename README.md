@@ -75,19 +75,20 @@ Ouvrir config/services.php, ajouter si non présent :
 - Regarder dans le projet que le fichier database.db est créé dans le dossier database, sinon le créer manuellement.
 
 8.	Modifier fichier .env pour que Laravel puisse se connecter avec la BD
-APP_NAME=Laravel
-APP_ENV=local
-APP_DEBUG=true
-APP_URL=http://localhost
+
+        APP_NAME=Laravel
+        APP_ENV=local
+        APP_DEBUG=true
+        APP_URL=http://localhost
 
 
-DB_CONNECTION=sqlite
-#DB_HOST=127.0.0.1
-#DB_PORT=3306
-DB_DATABASE=C:\Users\cesar\Documents\MIASHS\ProgWeb2\TP2Laravel\TP2Laravel\database\database.db
-#username et password pas necessaire pour sqlite
-#DB_USERNAME=root
-#DB_PASSWORD=ic2a
+        DB_CONNECTION=sqlite
+        #DB_HOST=127.0.0.1
+        #DB_PORT=3306
+        DB_DATABASE=C:\Users\cesar\Documents\MIASHS\ProgWeb2\TP2Laravel\TP2Laravel\database\database.db
+        #username et password pas necessaire pour sqlite
+        #DB_USERNAME=root
+        #DB_PASSWORD=ic2a
 
 *DB_DATABASE = avec votre chemin pour le fichier database.db
 
