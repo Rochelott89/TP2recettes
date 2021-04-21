@@ -6,7 +6,7 @@
 <style>
     div {text-align: center;}
 </style>
-<div>Notres dernières recettes</div>
+<div>Nos dernières recettes</div>
 <ul>
     @foreach ( $recipes as $recipe )
 
