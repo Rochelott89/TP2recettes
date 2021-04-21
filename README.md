@@ -156,7 +156,8 @@ Quelques problemes de débutant à mentionner lors de démarrage de projet étai
 * Des problèmes de la configuration de fichier env qui n'est pas un fichier de commit.
 * Des erreurs liées aux versions de php qui étaient plus embetantes que les erreurs de type “No application encryption key has been specified” qui pouvaient se résoudre en faisant:       php artisan key:generate
 * Des problémes liés aux syntaxes de laravel.
-* Essai infructueux de la possibilité de télécharger une image dans CRUD recettes 
-* Grandes difficultés de travail avec les recettes CRUD, problèmes fréquents entre la liaison avec le contrôleur et la vue. 
+* Essai infructueux de la possibilité de télécharger une image dans CRUD recettes pour chaque recette.
+* Grandes difficultés de travail avec les recettes CRUD, problèmes fréquents entre le contrôleur et la vue. 
+* Travailler sur le projet à distance en tant qu'étudiants. 
 
 
