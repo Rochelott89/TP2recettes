@@ -1,37 +1,37 @@
 ### Guide d’installation 
 
 1.	Clone repository
-•	git clone https://github.com/Rochelott89/TP2recettes
+-git clone https://github.com/Rochelott89/TP2recettes
 
 2.	CD (change directory) à l'emplacement de votre ordinateur désiré
-•	cd path
+-cd path
 
 3.	Composer installation 
-•	composer install
+-composer install
 
 4.	NPM installation
-•	npm install
-•	npm run dev
+-npm install
+-npm run dev
 
 5.	Mise en place de Socialite
-•	composer require laravel/jetstream
-•	php artisan jetstream:install livewire
-•	php artisan migrate (exécutez la commande pour migrer les propriétés d'authentification)
-•	composer require laravel/socialite
+-composer require laravel/jetstream
+-php artisan jetstream:install livewire
+-php artisan migrate (exécutez la commande pour migrer les propriétés d'authentification)
+-composer require laravel/socialite
 
 Ouvrir config/app.php, ajouter si non présent : 
 
-providers' => [
-    Laravel\Socialite\SocialiteServiceProvider::class,
-],
-'aliases' => [
-    'Socialite' => Laravel\Socialite\Facades\Socialite::class,
-],
+    providers' => [
+        Laravel\Socialite\SocialiteServiceProvider::class,
+    ],
+    'aliases' => [
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+    ],
 
 
 Ouvrir config/services.php, ajouter si non présent : 
 
-return [
+    return [
     
     //FACEBOOK 
     'facebook' => [
@@ -69,10 +69,10 @@ return [
     ],
 
 6.	Générer une clé de chiffrement d'application
-•	php artisan key:generate
+-php artisan key:generate
 
 7.	Création BD
-•	Regarder dans le projet que le fichier database.db est créé dans le dossier database, sinon le créer manuellement.
+-Regarder dans le projet que le fichier database.db est créé dans le dossier database, sinon le créer manuellement.
 
 8.	Modifier fichier .env pour que Laravel puisse se connecter avec la BD
 APP_NAME=Laravel
@@ -92,14 +92,14 @@ DB_DATABASE=C:\Users\cesar\Documents\MIASHS\ProgWeb2\TP2Laravel\TP2Laravel\datab
 *DB_DATABASE = avec votre chemin pour le fichier database.db
 
 9.	Migration de la BD
-•	php artisan migrate
+-php artisan migrate
 
 10.	Seed la BD
-•	php artisan migrate:fresh --seed -v
+-php artisan migrate:fresh --seed -v
 
 11.	Lancer le serveur
-•	php artisan serve
-•	http://localhost:8000/ pour aller à l’Accueil 
+-php artisan serve
+-http://localhost:8000/ pour aller à l’Accueil 
 
 
 ### Description
